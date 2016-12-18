@@ -9,6 +9,8 @@
             var arrayList = [];
 
             if (list == "") {
+                $scope.borderStatus = "errorBorder";
+                $scope.statusClass = "error";
                 $scope.message = "Please enter data first";
             }
             else{
@@ -17,14 +19,19 @@
                             arrayList.push(items[i].trim());            
                         }
                         else{
+                            
                             alert("You insert an empty item.")
                         }
                 }
 
                 if(arrayList.length <= 3){
+                    $scope.borderStatus = "fineBorder";
+                    $scope.statusClass = "fine";
                     $scope.message = "Enjoy!";
                 }
                 else{
+                    $scope.borderStatus = "fineBorder";
+                    $scope.statusClass = "fine";
                     $scope.message = "Too much!"
                 }
             }

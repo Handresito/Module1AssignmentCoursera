@@ -4,13 +4,30 @@
         <title>Module 1</title>
         <script src="angular.min.js"></script>
         <script src="app.js"></script>
+        <style>
+            .fineBorder{
+                 border: 1px solid green;
+            }
+
+            .errorBorder{
+                border: 1px solid red;
+            }
+
+            .error{
+                color: red;
+            }
+
+            .fine{
+                color: green;
+            }
+        </style>
     </head>
     <body ng-controller="LunchController">
-        <h1>Module 1 Exercise</h1>
+        <h1>Lunch Checker</h1>
         <div>
-            <input type="text" ng-model="list">
+            <input type="text" ng-model="list" ng-class="borderStatus" placeholder="Enter your lunch items">
             <button ng-click="check()">Check</button>
-            <div ng-class="colorState">
+            <div ng-class="statusClass">
                 {{message}}
             </div>
         </div>
