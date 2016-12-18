@@ -6,6 +6,7 @@
         $scope.check = function(){
             var list = $scope.list;
             var items = list.split(",");
+            $scope.counterItems = 0;
             var arrayList = [];
 
             if (list == "") {
@@ -35,6 +36,7 @@
                     $scope.message = "Too much!"
                 }
             }
+            $scope.counterItems = "Number of items:" + arrayList.length;
         };
 
 
