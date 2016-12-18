@@ -16,7 +16,8 @@
             }
             else{
                 for(var i = 0; i < items.length; i++){
-                        if(items[i].toString() !== " "){
+                        var item = items[i].trim();
+                        if(item.toString() !== ""){
                             arrayList.push(items[i].trim());            
                         }
                         else{
